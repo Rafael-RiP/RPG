@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de Personagem | Vampiro: A Máscara</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="ficha-vampiro.js"></script>
+</head>
+<body class="vampiro">
+
+  <header>
+    <h1>Ficha de Personagem</h1>
+    <nav>
+      <a href="index.html">Tormenta 20</a>
+      <a href="vampiro.html">Vampiro: A Máscara</a>
+      <a href="ordem.html">Ordem Paranormal</a>
+      <a href="ficha.html" class="ativo">Ficha de Personagem</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>🩸 Dados do Personagem</h2>
+      <label>Nome: <input id="nome" type="text"></label><br>
+      <label>Jogador: <input id="jogador" type="text"></label><br>
+      <label>Clã: <input id="cla" type="text"></label><br>
+      <label>Natureza: <input id="natureza" type="text"></label><br>
+      <label>Comportamento: <input id="comportamento" type="text"></label><br>
+      <label>Geração: <input id="geracao" type="number" min="3" max="15"></label><br>
+    </section>
+
+    <section>
+      <h2>⚔️ Atributos</h2>
+      <div class="colunas">
+        <div>
+          <h3>Físicos</h3>
+          <label>Força: <input id="forca" type="number" min="1" max="5"></label><br>
+          <label>Destreza: <input id="destreza" type="number" min="1" max="5"></label><br>
+          <label>Vigor: <input id="vigor" type="number" min="1" max="5"></label>
+        </div>
+        <div>
+          <h3>Sociais</h3>
+          <label>Carisma: <input id="carisma" type="number" min="1" max="5"></label><br>
+          <label>Manipulação: <input id="manipulacao" type="number" min="1" max="5"></label><br>
+          <label>Aparência: <input id="aparencia" type="number" min="1" max="5"></label>
+        </div>
+        <div>
+          <h3>Mentais</h3>
+          <label>Percepção: <input id="percepcao" type="number" min="1" max="5"></label><br>
+          <label>Inteligência: <input id="inteligencia" type="number" min="1" max="5"></label><br>
+          <label>Raciocínio: <input id="raciocinio" type="number" min="1" max="5"></label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎭 Habilidades</h2>
+      <textarea id="habilidades" rows="6" cols="60" placeholder="Liste talentos, perícias e conhecimentos..."></textarea>
+    </section>
+
+    <section>
+      <h2>🩸 Vantagens</h2>
+      <textarea id="vantagens" rows="6" cols="60" placeholder="Liste disciplinas, antecedentes, virtudes..."></textarea>
+    </section>
+
+    <section>
+      <h2>💀 Humanidade e Força de Vontade</h2>
+      <label>Humanidade: <input id="humanidade" type="number" min="1" max="10"></label>
+      <label>Força de Vontade: <input id="vontade" type="number" min="1" max="10"></label>
+    </section>
+
+    <div class="botoes">
+      <button id="salvar">💾 Salvar Ficha</button>
+      <button id="limpar">🧹 Limpar</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Crônicas da Noite | Ficha de Vampiro: A Máscara</p>
+  </footer>
+
+</body>
+</html>

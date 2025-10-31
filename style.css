@@ -1,0 +1,184 @@
+/* =============================
+   style.css - Versão com fundo completo e cores complementares
+============================= */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  margin: 0;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* mantém o fundo cobrindo toda a tela */
+  min-height: 100vh;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  position: relative;
+  z-index: 3;
+}
+
+header h1 {
+  margin-bottom: 8px;
+  font-size: 2em;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff5555;
+}
+
+nav a.ativo {
+  text-decoration: underline;
+}
+
+/* ===== Corpo principal ===== */
+main {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+article {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* ===== Rodapé ===== */
+footer {
+  text-align: center;
+  padding: 12px;
+  margin-top: 50px;
+  background: rgba(0,0,0,0.5);
+}
+
+/* =============================
+   Tema: Tormenta 20
+============================= */
+body.tormenta {
+  background-color: #e6ded1; /* cor de base que combina com o fundo */
+  background-image:
+    linear-gradient(rgba(245,240,230,0.75), rgba(230,220,200,0.85)),
+    url('https://i.pinimg.com/1200x/de/c3/2a/dec32a6e9c26d1cfce7986f66ee50c1e.jpg');
+}
+
+body.tormenta header {
+  background: rgba(255,250,240,0.8);
+  color: #3b1c09;
+}
+
+body.tormenta main {
+  background: rgba(255,255,255,0.85);
+  color: #2a1e14;
+}
+
+body.tormenta article {
+  background: rgba(250,245,235,0.9);
+  border: 1px solid rgba(160,130,100,0.3);
+}
+
+body.tormenta h2, body.tormenta h3 {
+  color: #8b3d20;
+}
+
+/* =============================
+   Tema: Vampiro: A Máscara
+============================= */
+body.vampiro {
+  background-color: #0b0000;
+  background-image:
+    linear-gradient(rgba(8,0,0,0.7), rgba(15,0,0,0.8)),
+    url('https://i.pinimg.com/1200x/cd/70/45/cd70450665e2ed233de0861059aec7c7.jpg');
+}
+
+body.vampiro header {
+  background: rgba(0,0,0,0.6);
+  color: #f8f8f8;
+}
+
+body.vampiro main {
+  background: rgba(20,20,20,0.7);
+  color: #f1eaea;
+  border: 1px solid rgba(120,0,0,0.3);
+}
+
+body.vampiro article {
+  background: rgba(35,35,35,0.75);
+  border: 1px solid rgba(120,0,0,0.3);
+  box-shadow: 0 0 10px rgba(255,0,0,0.15);
+}
+
+body.vampiro h2, body.vampiro h3 {
+  color: #ff4c4c;
+}
+
+/* =============================
+   Tema: Ordem Paranormal
+============================= */
+body.ordem {
+  background-color: #0b0d19;
+  background-image:
+    linear-gradient(rgba(10,15,25,0.75), rgba(5,10,30,0.8)),
+    url('https://i.pinimg.com/736x/1d/95/5a/1d955aa8fdb91c332f5e6fe141327026.jpg');
+}
+
+body.ordem header {
+  background: rgba(10,15,25,0.6);
+  color: #e2e2ff;
+}
+
+body.ordem main {
+  background: rgba(20,25,40,0.75);
+  color: #e8e8ff;
+  border: 1px solid rgba(85,100,200,0.2);
+}
+
+body.ordem article {
+  background: rgba(30,35,60,0.8);
+  border: 1px solid rgba(90,100,220,0.3);
+  box-shadow: 0 0 10px rgba(85,100,200,0.15);
+}
+
+body.ordem h2, body.ordem h3 {
+  color: #a5b0ff;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    padding: 20px;
+  }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
