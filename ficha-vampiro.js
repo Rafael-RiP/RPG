@@ -26,6 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
         campo.value = "";
         localStorage.removeItem(campo.id);
       });
+
+      // Controle das seções expansíveis
+document.querySelectorAll(".toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const alvo = document.getElementById(btn.dataset.target);
+    const aberto = !alvo.classList.contains("hidden");
+    document.querySelectorAll(".secao").forEach(s => s.classList.add("hidden"));
+    if (!aberto) alvo.classList.remove("hidden");
+  });
+});
+
     }
   });
 });
+
