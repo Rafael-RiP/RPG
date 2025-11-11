@@ -3,82 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ficha de Personagem | Vampiro: A Máscara</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Ficha de Vampiro: A Máscara</title>
+  <link rel="stylesheet" href="estilo.css">
   <script defer src="ficha-vampiro.js"></script>
 </head>
-<body class="vampiro">
+<body>
 
   <header>
-    <h1>Ficha de Personagem</h1>
-    <nav>
-      <a href="index.html">Tormenta 20</a>
-      <a href="vampiro.html">Vampiro: A Máscara</a>
-      <a href="ordem.html">Ordem Paranormal</a>
-      <a href="ficha.html" class="ativo">Ficha de Personagem</a>
-    </nav>
+    <h1>Ficha de Personagem - Vampiro: A Máscara</h1>
   </header>
 
-  <main>
-    <section class="intro">
-      <h2>🩸 Dados do Personagem</h2>
-      <label>Nome: <input id="nome" type="text"></label><br>
-      <label>Jogador: <input id="jogador" type="text"></label><br>
-      <label>Clã: <input id="cla" type="text"></label><br>
-      <label>Natureza: <input id="natureza" type="text"></label><br>
-      <label>Comportamento: <input id="comportamento" type="text"></label><br>
-      <label>Geração: <input id="geracao" type="number" min="3" max="15"></label><br>
-    </section>
+  <main class="ficha-container">
 
-    <section>
-      <h2>⚔️ Atributos</h2>
-      <div class="colunas">
+    <!-- Botões para expandir seções -->
+    <div class="botoes-secoes">
+      <button class="toggle" data-target="atributos">Atributos</button>
+      <button class="toggle" data-target="habilidades">Habilidades</button>
+      <button class="toggle" data-target="vantagens">Vantagens</button>
+      <button class="toggle" data-target="recursos">Recursos</button>
+      <button class="toggle" data-target="anotacoes">Anotações</button>
+    </div>
+
+    <!-- ATRIBUTOS -->
+    <section id="atributos" class="secao">
+      <h2>Atributos</h2>
+      <div class="bloco-atributos">
         <div>
           <h3>Físicos</h3>
-          <label>Força: <input id="forca" type="number" min="1" max="5"></label><br>
-          <label>Destreza: <input id="destreza" type="number" min="1" max="5"></label><br>
-          <label>Vigor: <input id="vigor" type="number" min="1" max="5"></label>
+          <label>Força: <input type="number" min="0" max="5" id="forca"></label>
+          <label>Destreza: <input type="number" min="0" max="5" id="destreza"></label>
+          <label>Vigor: <input type="number" min="0" max="5" id="vigor"></label>
         </div>
         <div>
           <h3>Sociais</h3>
-          <label>Carisma: <input id="carisma" type="number" min="1" max="5"></label><br>
-          <label>Manipulação: <input id="manipulacao" type="number" min="1" max="5"></label><br>
-          <label>Aparência: <input id="aparencia" type="number" min="1" max="5"></label>
+          <label>Carisma: <input type="number" min="0" max="5" id="carisma"></label>
+          <label>Manipulação: <input type="number" min="0" max="5" id="manipulacao"></label>
+          <label>Aparência: <input type="number" min="0" max="5" id="aparencia"></label>
         </div>
         <div>
           <h3>Mentais</h3>
-          <label>Percepção: <input id="percepcao" type="number" min="1" max="5"></label><br>
-          <label>Inteligência: <input id="inteligencia" type="number" min="1" max="5"></label><br>
-          <label>Raciocínio: <input id="raciocinio" type="number" min="1" max="5"></label>
+          <label>Percepção: <input type="number" min="0" max="5" id="percepcao"></label>
+          <label>Inteligência: <input type="number" min="0" max="5" id="inteligencia"></label>
+          <label>Raciocínio: <input type="number" min="0" max="5" id="raciocinio"></label>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2>🎭 Habilidades</h2>
-      <textarea id="habilidades" rows="6" cols="60" placeholder="Liste talentos, perícias e conhecimentos..."></textarea>
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="secao hidden">
+      <h2>Habilidades</h2>
+
+      <div class="bloco-habilidades">
+        <div>
+          <h3>Talentos</h3>
+          <label>Prontidão <input type="number" min="0" max="5" id="prontidao"></label>
+          <label>Esportes <input type="number" min="0" max="5" id="esportes"></label>
+          <label>Briga <input type="number" min="0" max="5" id="briga"></label>
+          <label>Empatia <input type="number" min="0" max="5" id="empatia"></label>
+          <label>Intimidação <input type="number" min="0" max="5" id="intimidacao"></label>
+        </div>
+        <div>
+          <h3>Perícias</h3>
+          <label>Condução <input type="number" min="0" max="5" id="conducao"></label>
+          <label>Segurança <input type="number" min="0" max="5" id="seguranca"></label>
+          <label>Furtividade <input type="number" min="0" max="5" id="furtividade"></label>
+          <label>Armas Brancas <input type="number" min="0" max="5" id="armas_brancas"></label>
+          <label>Sobrevivência <input type="number" min="0" max="5" id="sobrevivencia"></label>
+        </div>
+        <div>
+          <h3>Conhecimentos</h3>
+          <label>Computador <input type="number" min="0" max="5" id="computador"></label>
+          <label>Investigação <input type="number" min="0" max="5" id="investigacao"></label>
+          <label>Ocultismo <input type="number" min="0" max="5" id="ocultismo"></label>
+          <label>Ciência <input type="number" min="0" max="5" id="ciencia"></label>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>🩸 Vantagens</h2>
-      <textarea id="vantagens" rows="6" cols="60" placeholder="Liste disciplinas, antecedentes, virtudes..."></textarea>
+    <!-- VANTAGENS -->
+    <section id="vantagens" class="secao hidden">
+      <h2>Vantagens</h2>
+      <div class="bloco-vantagens">
+        <div>
+          <h3>Antecedentes</h3>
+          <textarea id="antecedentes" rows="5" placeholder="Aliados, Recursos, Contatos, etc."></textarea>
+        </div>
+        <div>
+          <h3>Disciplinas</h3>
+          <textarea id="disciplinas" rows="5" placeholder="Potência, Rapidez, Ofuscação..."></textarea>
+        </div>
+        <div>
+          <h3>Virtudes</h3>
+          <label>Consciência: <input type="number" min="0" max="5" id="consciencia"></label>
+          <label>Autocontrole: <input type="number" min="0" max="5" id="autocontrole"></label>
+          <label>Coragem: <input type="number" min="0" max="5" id="coragem"></label>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>💀 Humanidade e Força de Vontade</h2>
-      <label>Humanidade: <input id="humanidade" type="number" min="1" max="10"></label>
-      <label>Força de Vontade: <input id="vontade" type="number" min="1" max="10"></label>
+    <!-- RECURSOS (Vitalidade, Sangue, Vontade, Humanidade) -->
+    <section id="recursos" class="secao hidden">
+      <h2>Recursos</h2>
+
+      <div class="bloco-recursos">
+        <div>
+          <h3>Vitalidade</h3>
+          <label><input type="checkbox" id="escoriado"> Escoriado (-0)</label>
+          <label><input type="checkbox" id="ferido"> Ferido (-1)</label>
+          <label><input type="checkbox" id="ferido-gravemente"> Ferido Gravemente (-2)</label>
+          <label><input type="checkbox" id="espancado"> Espancado (-2)</label>
+          <label><input type="checkbox" id="aleijado"> Aleijado (-5)</label>
+        </div>
+
+        <div>
+          <h3>Humanidade / Trilha</h3>
+          <input type="number" min="0" max="10" id="humanidade">
+        </div>
+
+        <div>
+          <h3>Força de Vontade</h3>
+          <input type="number" min="0" max="10" id="forca_vontade">
+        </div>
+
+        <div>
+          <h3>Pontos de Sangue</h3>
+          <input type="number" min="0" max="20" id="pontos_sangue">
+        </div>
+      </div>
     </section>
 
-    <div class="botoes">
-      <button id="salvar">💾 Salvar Ficha</button>
-      <button id="limpar">🧹 Limpar</button>
-    </div>
+    <!-- ANOTAÇÕES -->
+    <section id="anotacoes" class="secao hidden">
+      <h2>Anotações</h2>
+      <textarea id="anotacoes_texto" rows="10" placeholder="História, eventos, observações..."></textarea>
+    </section>
+
   </main>
-
-  <footer>
-    <p>© 2025 Crônicas da Noite | Ficha de Vampiro: A Máscara</p>
-  </footer>
 
 </body>
 </html>
