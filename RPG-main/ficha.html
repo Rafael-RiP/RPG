@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de Vampiro: A Máscara</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="ficha-vampiro.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Ficha de Personagem - Vampiro: A Máscara</h1>
+  </header>
+
+  <main class="ficha-container">
+
+    <!-- Botões para expandir seções -->
+    <div class="botoes-secoes">
+      <button class="toggle" data-target="atributos">Atributos</button>
+      <button class="toggle" data-target="habilidades">Habilidades</button>
+      <button class="toggle" data-target="vantagens">Vantagens</button>
+      <button class="toggle" data-target="recursos">Recursos</button>
+      <button class="toggle" data-target="anotacoes">Anotações</button>
+    </div>
+
+    <!-- ATRIBUTOS -->
+    <section id="atributos" class="secao">
+      <h2>Atributos</h2>
+      <div class="bloco-atributos">
+        <div>
+          <h3>Físicos</h3>
+          <label>Força: <input type="number" min="0" max="5" id="forca"></label>
+          <label>Destreza: <input type="number" min="0" max="5" id="destreza"></label>
+          <label>Vigor: <input type="number" min="0" max="5" id="vigor"></label>
+        </div>
+        <div>
+          <h3>Sociais</h3>
+          <label>Carisma: <input type="number" min="0" max="5" id="carisma"></label>
+          <label>Manipulação: <input type="number" min="0" max="5" id="manipulacao"></label>
+          <label>Aparência: <input type="number" min="0" max="5" id="aparencia"></label>
+        </div>
+        <div>
+          <h3>Mentais</h3>
+          <label>Percepção: <input type="number" min="0" max="5" id="percepcao"></label>
+          <label>Inteligência: <input type="number" min="0" max="5" id="inteligencia"></label>
+          <label>Raciocínio: <input type="number" min="0" max="5" id="raciocinio"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="secao hidden">
+      <h2>Habilidades</h2>
+
+      <div class="bloco-habilidades">
+        <div>
+          <h3>Talentos</h3>
+          <label>Prontidão <input type="number" min="0" max="5" id="prontidao"></label>
+          <label>Esportes <input type="number" min="0" max="5" id="esportes"></label>
+          <label>Briga <input type="number" min="0" max="5" id="briga"></label>
+          <label>Empatia <input type="number" min="0" max="5" id="empatia"></label>
+          <label>Intimidação <input type="number" min="0" max="5" id="intimidacao"></label>
+          <label>Esquiva <input type="number" min="0" max="5" id="intimidacao"></label>
+          <label>Expressão <input type="number" min="0" max="5" id="intimidacao"></label>
+          <label>Liderança <input type="number" min="0" max="5" id="intimidacao"></label>
+          <label>Manha <input type="number" min="0" max="5" id="intimidacao"></label>
+          <label>Lábia <input type="number" min="0" max="5" id="intimidacao"></label>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div>
+          <h3>Perícias</h3>
+          <label>Empatia c/ Animais <input type="number" min="0" max="5" id="conducao"></label>
+          <label>Ofícios <input type="number" min="0" max="5" id="conducao"></label>
+          <label>Condução <input type="number" min="0" max="5" id="conducao"></label>
+          <label>Etiqueta <input type="number" min="0" max="5" id="conducao"></label>
+          <label>Armas de fogo <input type="number" min="0" max="5" id="conducao"></label>
+          <label>Armas Brancas <input type="number" min="0" max="5" id="conducao"></label>
+          <label>Performance <input type="number" min="0" max="5" id="conducao"></label>
+          <label>Segurança <input type="number" min="0" max="5" id="seguranca"></label>
+          <label>Furtividade <input type="number" min="0" max="5" id="furtividade"></label>
+          <label>Sobrevivência <input type="number" min="0" max="5" id="sobrevivencia"></label>
+        </div>
+        <div>
+          <h3>Conhecimentos</h3>
+          <label>Acadêmicos <input type="number" min="0" max="5" id="computador"></label>
+          <label>Computador <input type="number" min="0" max="5" id="computador"></label>
+          <label>Finaças <input type="number" min="0" max="5" id="computador"></label>
+          <label>Investigação <input type="number" min="0" max="5" id="investigacao"></label>
+          <label>Direito <input type="number" min="0" max="5" id="computador"></label>
+          <label>Linguistica <input type="number" min="0" max="5" id="computador"></label>
+          <label>Medicina <input type="number" min="0" max="5" id="computador"></label>
+          <label>Ocultismo <input type="number" min="0" max="5" id="ocultismo"></label>
+          <label>Política <input type="number" min="0" max="5" id="computador"></label>
+          <label>Ciência <input type="number" min="0" max="5" id="ciencia"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- VANTAGENS -->
+    <section id="vantagens" class="secao hidden">
+      <h2>Vantagens</h2>
+      <div class="bloco-vantagens">
+        <div>
+          <h3>Antecedentes</h3>
+          <textarea id="antecedentes" rows="5" placeholder="Aliados, Recursos, Contatos, etc."></textarea>
+        </div>
+        <div>
+          <h3>Disciplinas</h3>
+          <textarea id="disciplinas" rows="5" placeholder="Potência, Rapidez, Ofuscação..."></textarea>
+        </div>
+        <div>
+          <h3>Virtudes</h3>
+          <label>Consciência: <input type="number" min="0" max="5" id="consciencia"></label>
+          <label>Autocontrole: <input type="number" min="0" max="5" id="autocontrole"></label>
+          <label>Coragem: <input type="number" min="0" max="5" id="coragem"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS (Vitalidade, Sangue, Vontade, Humanidade) -->
+    <section id="recursos" class="secao hidden">
+      <h2>Recursos</h2>
+
+      <div class="bloco-recursos">
+        <div>
+          <h3>Vitalidade</h3>
+          <label><input type="checkbox" id="escoriado"> Escoriado (-0)</label>
+          <label><input type="checkbox" id="ferido"> Ferido (-1)</label>
+          <label><input type="checkbox" id="ferido-gravemente"> Ferido Gravemente (-2)</label>
+          <label><input type="checkbox" id="espancado"> Espancado (-2)</label>
+          <label><input type="checkbox" id="aleijado"> Aleijado (-5)</label>
+        </div>
+
+        <div>
+          <h3>Humanidade / Trilha</h3>
+          <input type="number" min="0" max="10" id="humanidade">
+        </div>
+
+        <div>
+          <h3>Força de Vontade</h3>
+          <input type="number" min="0" max="10" id="forca_vontade">
+        </div>
+
+        <div>
+          <h3>Pontos de Sangue</h3>
+          <input type="number" min="0" max="20" id="pontos_sangue">
+        </div>
+      </div>
+    </section>
+
+    <!-- ANOTAÇÕES -->
+    <section id="anotacoes" class="secao hidden">
+      <h2>Anotações</h2>
+      <textarea id="anotacoes_texto" rows="10" placeholder="História, eventos, observações..."></textarea>
+    </section>
+
+  </main>
+
+</body>
+</html>
